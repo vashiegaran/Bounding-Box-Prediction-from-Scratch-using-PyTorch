@@ -8,10 +8,9 @@ The focus here is more on how to read an image and its bounding box,  resize  an
 2. Resizing Images and Bounding Boxes
 
 * Convert the bounding box into an image (called mask) of the same size as the image it corresponds to. This mask    would just have 0 for background and 1 for the area covered by the bounding box.
-* 
 * Resize the mask to the required dimensions using the information from .xml file .
 * Extract bounding box coordinates from the resized mask
-* 
+
 <img src="sa.png" width="500" height="200">
 
 3.Data Augmentation

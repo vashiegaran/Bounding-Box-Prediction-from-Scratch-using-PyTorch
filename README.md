@@ -5,7 +5,7 @@ The focus here is more on how to read an image and its bounding box,  resize  an
 1.Dataset
 
 2. Resizing Images and Bounding Boxes
-<img src="aa.png" width="100" height="100">
+<img src="aa.png" width="500" height="700">
 * Convert the bounding box into an image (called mask) of the same size as the image it corresponds to. This mask    would just have 0 for background and 1 for the area covered by the bounding box.
 * Resize the mask to the required dimensions using the information from .xml file .
 * Extract bounding box coordinates from the resized mask

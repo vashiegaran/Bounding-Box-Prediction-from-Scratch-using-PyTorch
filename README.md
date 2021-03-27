@@ -5,7 +5,6 @@ The focus here is more on how to read an image and its bounding box,  resize  an
 1.Dataset
 
 <img src="data.png" width="500" height="100">
-
 2. Resizing Images and Bounding Boxes
 
 * Convert the bounding box into an image (called mask) of the same size as the image it corresponds to. This mask    would just have 0 for background and 1 for the area covered by the bounding box.
@@ -27,5 +26,9 @@ After Transformation
 <img src="at.png" width="500" height="200">
 
 4.PyTorch Model
+
 For the model, I’ve used a very simple pre-trained resNet-34 model. Since we have two tasks to accomplish here, there are two final layers — the bounding box regressor and the image classifier.
+
+Prediction on Test Image
+
 <img src="test.png" width="500" height="200">

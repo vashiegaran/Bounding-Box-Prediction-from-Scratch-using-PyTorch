@@ -5,7 +5,17 @@ The focus here is more on how to read an image and its bounding box,  resize  an
 1.Dataset
 
 2. Resizing Images and Bounding Boxes
+![CNN Architecture](aa.png)
+* Convert the bounding box into an image (called mask) of the same size as the image it corresponds to. This mask    would just have 0 for background and 1 for the area covered by the bounding box.
+* Resize the mask to the required dimensions using the information from .xml file .
+* Extract bounding box coordinates from the resized mask
+![CNN Architecture](ss.png)
+3.Data Augmentation
+* I’ve used flip, rotation, center crop and random crop.
+![CNN Architecture](bt.png)
 
-* Convert the bounding box into an image (called mask) of the same size as the image it corresponds to. This mask would just have 0 for background and 1 for the area covered by the bounding box.
+![CNN Architecture](at.png)
 
-
+4.PyTorch Model
+For the model, I’ve used a very simple pre-trained resNet-34 model. Since we have two tasks to accomplish here, there are two final layers — the bounding box regressor and the image classifier.
+![CNN Architecture](test.png)
